@@ -21,3 +21,9 @@ function loginGoogle() {
 function logout() {
   firebase.auth().signOut();
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("loginBtn") || document.querySelector("button");
+  if (btn) {
+    btn.onclick = loginGoogle;
+  }
+});
