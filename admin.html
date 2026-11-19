@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Admin - CROWN__NAILS</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.admin-page{background:#fff0f6;min-height:100vh}.admin-box{max-width:850px;margin:auto;padding:20px;background:#fff;border-radius:22px;box-shadow:0 10px 30px rgba(255,90,158,.2)} .admin-box h2{margin-bottom:10px} .tabla{background:#fff0f6;border:1px solid #ffd6e7;border-radius:12px;padding:10px;margin:8px 0;font-size:14px}
+</style></head>
+<body class="admin-page">
+<header><div class="logo-wrap"><img src="logo.jpg"><div class="logo-txt"><b>CROWN__NAILS</b><br><small>PANEL ADMIN</small></div></div><a href="index.html" class="btn white">← Volver a la página</a></header>
+<section class="admin-box">
+<h2>🔐 Panel de Administración Privado</h2><p class="sub">Solo la dueña puede entrar con su Google. Sin cambiar código.</p>
+<div style="text-align:center">
+<p id="quienSoy" style="font-weight:bold"></p>
+<button class="btn pink" onclick="loginGoogle()" id="btnLogin">🔐 Entrar con mi Google</button>
+<button class="btn white" onclick="salirGoogle()">Salir</button>
+</div>
+<div id="adminPanel" style="display:none">
+<h3 style="color:#c2185b;margin-top:20px">📊 Estadísticas del Negocio</h3><p id="stats" style="background:#fff0f6;padding:12px;border-radius:12px;font-weight:700"></p>
+<h3>➕ Agregar Nuevo Servicio</h3><input id="nuevoServNombre" placeholder="Nombre Ej: Uñas Almendra"><input id="nuevoServPrecio" type="number" placeholder="Precio Ej: 15000"><button class="btn pink" onclick="agregarServicio()">Agregar Servicio</button>
+<h3>💲 Cambiar Precios</h3><p class="sub">Cambias aquí y cambia para todas las clientas al instante</p><select id="servicioEditar"></select><input id="nuevoPrecioEditar" type="number" placeholder="Nuevo precio"><button class="btn gold" onclick="cambiarPrecio()">💲 Cambiar Precio Para Todos</button>
+<h3>🗑️ Eliminar Servicio</h3><select id="servicioBorrar"></select><button class="btn pink" onclick="borrarServicio()">Eliminar Servicio</button>
+<h3>🎉 Crear Promoción / Descuento</h3><input id="nuevaPromo" placeholder="Ej: 2x1 en Press-On hoy"><button class="btn gold" onclick="guardarPromo()">Publicar Promo</button>
+<h3>📸 Agregar / Eliminar Fotografías</h3><input id="urlFoto" placeholder="Pegá link de foto"><select id="catFoto"><option value="acrilicas">Acrílicas</option><option value="semi">Semi</option><option value="press">Press-On</option></select><select id="tipoFoto"><option value="popular">Popular</option><option value="nuevo">Nuevo</option><option value="">Normal</option></select><button class="btn pink" onclick="agregarFoto()">Agregar Foto</button><div id="adminFotos"></div>
+<h3>📅 Consultar Citas / Clientes - Aceptar o Rechazar</h3><div id="adminCitas"></div>
+<h3>⭐ Revisar Opiniones / Reseñas</h3><div id="adminResenas"></div>
+</div>
+</section>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="admin.js"></script>
+</body></html>

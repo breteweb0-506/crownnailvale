@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CROWN__NAILS 👑 | La Unión, Cartago</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap"><img src="logo.jpg"><div class="logo-txt"><b>CROWN__NAILS</b><br><small>LA UNIÓN • CARTAGO</small></div></div>
+  <nav><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#disenos">Diseños</a><a href="#citas">Citas</a><a href="#ubicacion">Ubicación</a><a href="admin.html" class="admin-link">🔐 Admin</a></nav>
+</header>
+
+<section class="hero" id="inicio">
+  <img src="logo.jpg" class="hero-logo">
+  <h1>CROWN__NAILS</h1>
+  <p class="frase">"Tus uñas, tu estilo, tu corona" 👑</p>
+  <p class="sub-hero">Diseños únicos • Atención personalizada • La Unión, Cartago</p>
+  <a class="btn pink" href="#citas">📅 Agendar una cita</a>
+  <a class="btn white" href="#disenos">✨ Ver nuestros diseños</a>
+</section>
+
+<div class="foto-grande">
+  <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200" alt="Uñas CROWN">
+  <div class="foto-texto">💅 Arte en tus manos</div>
+</div>
+
+<section><div class="promo" id="promoBox">⏳ Cargando promo...</div><p class="en-vivo">● En vivo • Si la dueña cambia un precio, cambia aquí al instante</p></section>
+
+<section id="servicios"><h2>Servicios & Precios</h2><p class="sub">Precios actualizados en tiempo real</p><div class="grid" id="listaServicios">Cargando...</div></section>
+
+<section id="disenos"><h2>Galería de Diseños</h2><p class="sub">Ver fotografías de trabajos realizados • Elegí el que querés para tu cita</p>
+<div class="filtros">
+<button onclick="filtrar('todos')">Todos</button><button onclick="filtrar('acrilicas')">Acrílicas</button><button onclick="filtrar('semi')">Semipermanente</button><button onclick="filtrar('press')">Press-On</button><button onclick="filtrar('popular')">🔥 Populares</button><button onclick="filtrar('nuevo')">🆕 Nuevos</button>
+</div><br><div class="grid" id="galeria"></div></section>
+
+<section id="citas" class="citas-box"><h2>Agendar Cita</h2><p class="sub">Llená el formulario y te confirmamos por WhatsApp</p>
+<input id="nombre" placeholder="1. Tu nombre"><input id="telefono" placeholder="2. Tu número de teléfono Ej: 6155-9678">
+<label>3. Seleccionar el servicio:</label><select id="servicioSelect"></select>
+<label>4. Elegir fecha:</label><input type="date" id="fecha">
+<label>5. Elegir hora:</label><select id="hora"><option>9:00 AM</option><option>11:00 AM</option><option>1:00 PM</option><option>3:00 PM</option><option>5:00 PM</option></select>
+<label>6. Adjuntar fotografía del diseño que deseas:</label><input type="file" id="fotoCita" accept="image/*"><textarea id="nota" placeholder="7. ¿Qué diseño querés? Escribilo aquí"></textarea>
+<button class="btn pink" onclick="enviarCita()">✅ Enviar Solicitud de Cita</button>
+<button class="btn green" onclick="enviarWhats()">💚 Enviar Solicitud por WhatsApp</button>
+<p id="msgCita"></p></section>
+
+<section><h2>Lo que dicen nuestras Reinas</h2><div id="resenas"></div>
+<input id="miNombreR" placeholder="Tu nombre"><select id="estrellas"><option>⭐⭐⭐⭐⭐</option><option>⭐⭐⭐⭐</option><option>⭐⭐⭐</option></select><textarea id="textoR" placeholder="¿Cómo te atendimos?"></textarea><button class="btn pink" onclick="dejarResena()">Dejar mi reseña</button></section>
+
+<section id="ubicacion"><h2>📍 Nuestra Ubicación</h2><p class="sub">La Unión, Cartago, Costa Rica 🇨🇷</p>
+<div class="mapa">
+<iframe src="https://www.google.com/maps?q=La%20Uni%C3%B3n%2C%20Cartago%2C%20Costa%20Rica&output=embed" width="100%" height="300" style="border:0;border-radius:18px" loading="lazy"></iframe>
+</div>
+<p style="text-align:center;margin-top:10px"><b>📍 La Unión, Cartago</b><br>📱 WhatsApp: 6155-9678<br>🕐 Lun - Sáb: 9:00 AM - 6:00 PM</p>
+<a class="btn green" href="https://wa.me/50661559678?text=Hola%20CROWN%20👑%20Quiero%20ubicación" target="_blank">💚 Pedir ubicación por WhatsApp</a>
+<a class="btn white" href="https://www.google.com/maps/search/?api=1&query=La+Unión+Cartago+Costa+Rica" target="_blank">📍 Abrir en Google Maps</a>
+</section>
+
+<footer><img src="logo.jpg"><br><b>CROWN__NAILS</b><br>La Unión, Cartago 🇨🇷<br>Tus uñas, tu estilo, tu corona 👑</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="app.js"></script>
+</body></html>
