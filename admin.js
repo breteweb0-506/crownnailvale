@@ -1,4 +1,4 @@
-const ADMIN_EMAIL = "TU-CORREO-AQUI@gmail.com";
+const ADMIN_EMAIL = "breteweb0@gmail.com";
 
 firebase.auth().onAuthStateChanged((user) => {
   const loginBox = document.getElementById("loginBox");
